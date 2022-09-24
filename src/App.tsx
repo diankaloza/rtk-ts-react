@@ -5,10 +5,10 @@ import { FavouritesPages } from "./pages/FavouritesPages";
 
 import { HomePage } from "./pages/HomePage";
 
-function App() {
+export function App() {
   return (
     <>
-      <Navigation></Navigation>
+      <Navigation />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/favourites" element={<FavouritesPages />} />
@@ -16,5 +16,3 @@ function App() {
     </>
   );
 }
-
-export default App;

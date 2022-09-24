@@ -1,20 +1,20 @@
-import { useAppSelector } from "../hooks/redux";
+import { useAppSelector } from 'hooks/useAppSelector'
 
 export const FavouritesPages = () => {
-  const { favoutites } = useAppSelector((state) => state.github);
+  const { favourites } = useAppSelector((state) => state.github)
 
-  if (favoutites.length === 0) return <p className="text-center">No items</p>;
+  if (favourites.length === 0) return <p className='text-center'>No items</p>
   return (
-    <div className="flex justify-center pt-10 mx-auto h-screen w-screen">
-      <ul className="list-none">
-        {favoutites.map((f) => (
+    <div className='flex justify-center pt-10 mx-auto h-screen w-screen'>
+      <ul className='list-none'>
+        {favourites.map((f) => (
           <li key={f}>
-            <a href={f} target="_blank">
+            <a href={f} target='_blank'>
               {f}
             </a>
           </li>
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
